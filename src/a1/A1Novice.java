@@ -15,7 +15,7 @@ public class A1Novice {
 		
 		while (a < customers) {
 			
-			double price = 0.0; 
+			double price = 0.00; 
 			char initial1 = scan.next().charAt(0);
 			String surname1 = scan.next();
 			
@@ -23,13 +23,14 @@ public class A1Novice {
 			int i = 0;
 			
 			while (i < totItem) {
-				price = price + scan.nextInt() * scan.nextDouble();
+				int numb = scan.nextInt();
+				String xd = scan.next();
+				price = price + numb * scan.nextDouble();
 				i++;
 			}
+
 			
-			Double.toString(price);
-			
-			System.out.println(initial1 + ". " + surname1 + " " + price);
+			System.out.println(initial1 + ". " + surname1 + ": " + String.format ("%.2f", price));
 			
 			a++;
 			}
