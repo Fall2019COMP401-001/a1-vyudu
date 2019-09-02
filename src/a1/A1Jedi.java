@@ -30,14 +30,23 @@ public class A1Jedi {
 			String lname = scan.next();
 			
 			int load = scan.nextInt();
+			String[] itemsBought = new String[load]; 
 			int b = 0;
 			while (b < load) {
 				int numBought = scan.nextInt();
-				String itemBought = scan.next();
+				itemsBought[b] = scan.next();
 				int c = 0;
 				while (c < items) {
-					if (prods[c].equals(itemBought)) {
+					if (prods[c].equals(itemsBought[b])) {
 						numBoughtArray[c] = numBoughtArray[c] + numBought;
+						int e = 0;
+						while (e < b) {
+							if (itemsBought[b].equals(itemsBought[e])) {
+								custBoughtArray[c]--;
+								e = b;
+							}
+							e++;
+						}
 						custBoughtArray[c]++;
 					}
 					c++;
