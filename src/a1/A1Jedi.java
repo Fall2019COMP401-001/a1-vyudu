@@ -44,10 +44,8 @@ public class A1Jedi {
 				}
 				b++;
 			}
+			a++;
 		}
-		
-		System.out.println("LOL");
-		System.out.println(custBoughtArray[0] + custBoughtArray[1] + custBoughtArray[2]);
 		
 		int d = 0;
 		while (d < items) {
